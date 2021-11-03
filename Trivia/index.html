@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--Those are imports and defentions you should not edit  -->
+	
+    <!--  Meta  -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Trivia Game</title> <!-- You can enter the application title here -->
+    
+	<!--  Styles  -->
+    <link rel="stylesheet" href="myCss.css"> <!--the reference to your Css should be inserted here -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/f24533ba21.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    
+	<!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
+	<!-- Jquery you should not edit -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+	<!-- JavaScript -->
+    <!--the reference to your JavaScript code should be inserted here under src -->
+	 <script type="text/javascript" src="Script.js"> </script>
+	
+</head>
+
+<body>
+    <video autoplay muted loop id="background">
+        <source src="background1.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <div id="showScore"></div>
+
+        <div class="row-main" id="row-main">
+            <div class="card-menu" id="card-menu">
+                <div id="beforeGame">
+                    <p id="header"><b id="inHeader">Let's Play Trivia !</b></p>
+                    <div class="btn-set-a-game">
+                        <button type="button" id="btn1" onclick="startGame()">Set A Game</button>
+                    </div>
+                    <div class="btn-game-rules">
+                        <button id="btn2" class="rules" onclick="gameRules()">Game Rules</button>
+                    </div>
+                </div>
+                <div id="chooseGame">
+                        <div id="cat">
+                            <select name="categories" id="categories"></select>
+                        </div>
+                        <select name="difficulty" id="difficulty">
+                            <option value="null">Select Difficulty</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                        <input type="text" id="amount" name="amount" placeholder="Please select Questions 1-20">
+                        <select name="type" id="type">
+                            <option value="null">Choose A Type</option>
+                            <option value="boolean">True/False</option>
+                            <option value="multiple">Multipile Options</option>
+                        </select>
+                        <button id="startWithValues" onclick="chosenAll()"> START !</button>
+                        <button id="back" onclick="goBack()">Back</button>
+                </div>
+                <div id="gaming"></div>
+            </div>
+        </div>
+    </div> <!--Close Container-->
+    <footer class="footer">
+        &copy; Yarin Keren - 312141476<br>
+        Nitzan Schatz - 316370386
+    </footer>
+</body>
+</html>
